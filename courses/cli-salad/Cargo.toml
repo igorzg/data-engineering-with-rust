@@ -1,0 +1,13 @@
+[package]
+name = "cli-salad"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+clap = { version = "4.6.4", features = ["derive"] }
+rand = "0.10.3"
+
+[lints]
+workspace = true

@@ -1,0 +1,36 @@
+[workspace]
+resolver = "2"
+members = [
+    "courses/cli-salad",
+    "courses/data-race",
+    "courses/hashmap-count",
+    "courses/hashmap-language",
+    "courses/linked-list-fruit-salad",
+    "courses/vector-fruit-salad"
+]
+
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+authors = ["ii"]
+license = "MIT"
+
+
+[workspace.dependencies]
+tracing = "0.1"
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true
+opt-level = 3
+panic = "abort"
+
+[profile.dev]
+debug = 1
+incremental = true
+
+[workspace.lints.clippy]
+all = "warn"
+pedantic = "warn"
