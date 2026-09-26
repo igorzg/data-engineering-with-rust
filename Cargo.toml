@@ -3,6 +3,7 @@ resolver = "2"
 members = [
     "courses/cli-salad",
     "courses/data-race",
+    "courses/graph-centrality-ufc",
     "courses/hashmap-count",
     "courses/hashmap-language",
     "courses/linked-list-fruit-salad",

@@ -1,0 +1,12 @@
+[package]
+name = "graph-centrality-ufc"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+petgraph = "0.8.3"
+
+[lints]
+workspace = true
