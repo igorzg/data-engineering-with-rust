@@ -53,6 +53,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "binaryheap-fruit"
+version = "0.1.0"
+dependencies = [
+ "rand",
+]
+
+[[package]]
+name = "btreeset-fruit"
+version = "0.1.0"
+dependencies = [
+ "rand",
+]
+
+[[package]]
 name = "cfg-if"
 version = "1.0.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -229,6 +243,13 @@ version = "0.1.0"
 [[package]]
 name = "hashmap-language"
 version = "0.1.0"
+
+[[package]]
+name = "hashset-fruit"
+version = "0.1.0"
+dependencies = [
+ "rand",
+]
 
 [[package]]
 name = "heck"

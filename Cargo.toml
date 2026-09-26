@@ -6,9 +6,11 @@ members = [
     "courses/graph-centrality-ufc",
     "courses/hashmap-count",
     "courses/hashmap-language",
+    "courses/btreeset-fruit",
+    "courses/hashset-fruit",
     "courses/linked-list-fruit-salad",
     "courses/vector-fruit-salad"
-]
+, "courses/binaryheap-fruit"]
 
 
 [workspace.package]

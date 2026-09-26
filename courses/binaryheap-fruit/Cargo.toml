@@ -1,0 +1,12 @@
+[package]
+name = "binaryheap-fruit"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+rand = "0.10.3"
+
+[lints]
+workspace = true

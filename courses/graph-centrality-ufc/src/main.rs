@@ -1,7 +1,27 @@
+//!
+//! Represents a fighter in a graph.
+//!
+//! # Fields
+//!
+//! * `name` - The name of the fighter as a `String`.
 use std::fmt;
 use petgraph::{Direction, EdgeDirection};
 use petgraph::graph::{UnGraph, NodeIndex};
 
+/// Represents a fighter in a combat scenario.
+///
+/// # Fields
+///
+/// * `name` - A `String` that holds the name of the fighter.
+///
+/// # Examples
+///
+/// ```
+/// let fighter = Fighter {
+///     name: String::from("Goku"),
+/// };
+/// println!("{:?}", fighter);
+/// ```
 #[derive(Debug)]
 struct Fighter {
     name: String
@@ -21,10 +41,72 @@ impl fmt::Display for Fighter {
     }
 }
 
+/// Adds an edge between two specified nodes in the given graph with a weight of 1.0.
+///
+/// # Arguments
+///
+/// * `graph` - A mutable reference to an undirected graph (`UnGraph`) where each node holds a reference to a `Fighter`.
+/// * `nodes` - A slice of node indices that are already present in the graph.
+/// * `a` - The index of the first node in the `nodes` slice.
+/// * `b` - The index of the second node in the `nodes` slice.
+///
+/// # Example
+///
+/// ```
+/// use petgraph::prelude::*;
+///
+/// let mut graph = UnGraph::<&Fighter, f32>::new();
+/// let fighter1 = Fighter { name: "John" };
+/// let fighter2 = Fighter { name: "Jane" };
+///
+/// let node_a = graph.add_node(&fighter1);
+/// let node_b = graph.add_node(&fighter2);
+///
+/// add_edge(&mut graph, &[node_a, node_b], 0, 1);
+///
+/// assert_eq!(graph.edge_count(), 1);
+/// ```
+///
+/// # Panics
+///
+/// This function will panic if `a` or `b` are out of bounds for the `nodes` slice.
+///
+/// # Notes
+///
+/// Ensure that the nodes at indices `a` and `b` exist in the graph before calling this function.
 fn add_edge(graph: &mut UnGraph<&Fighter, f32>, nodes: &[NodeIndex], a: usize, b: usize) {
     graph.add_edge(nodes[a], nodes[b], 1.0);
 }
 
+/// The main function to demonstrate the calculation of closeness centrality in an undirected graph.
+///
+///
+/// # Dependencies
+/// This code assumes the existence of a `Fighter` struct with a `name` field and an `add_edge` function that adds edges to the graph.
+/// The `UnGraph` type and related functionality are part of the `petgraph` crate, which must be included in the project's dependencies.
+///
+/// # Example Output
+/// ```
+/// The closeness centrality of Dustin Poirier is 0.50
+/// Dustin Poirier has a centrality of 0.50, implying they had less fights compared to Conor McGregor
+/// --------------------
+/// The closeness centrality of Khabib Nurmagomedov is 0.33
+/// Khabib Nurmagomedov has a highest centrality of 0.33 as they have fought with the least number
+/// --------------------
+/// The closeness centrality of Jose Aldo is 0.33
+/// Jose Aldo has a highest centrality of 0.33 as they have fought with the least number
+/// --------------------
+/// The closeness centrality of Conor McGregor is 0.25
+/// Conor McGregor has the lowest centrality because he has fought with all other fighters in the group
+/// --------------------
+/// The closeness centrality of Nate Diaz is 0.50
+/// Nate Diaz has a centrality of 0.50, implying they had less fights compared to Conor McGregor
+/// --------------------
+/// ```
+///
+/// # Usage
+/// To run this program, ensure you have the `petgraph` crate included in your project's `Cargo.toml` file.
+/// Then, execute the program using `cargo run`.
 fn main() {
     let mut graph = UnGraph::new_undirected();
     let fighters = [
