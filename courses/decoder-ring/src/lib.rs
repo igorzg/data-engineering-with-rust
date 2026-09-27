@@ -1,6 +1,7 @@
 use std::collections::HashMap;
 
-fn gen_counts() -> HashMap<char, f32> {
+#[must_use]
+pub fn gen_counts() -> HashMap<char, f32> {
     let mut eng_freq = HashMap::new();
     eng_freq.insert('e', 12.7);
     eng_freq.insert('t', 9.1);
@@ -15,7 +16,8 @@ fn gen_counts() -> HashMap<char, f32> {
     eng_freq
 }
 
-fn stat_analysis(text: &str) -> Vec<(char, u32, f32, Option<f32>, f32)> {
+#[must_use]
+pub fn stat_analysis(text: &str) -> Vec<(char, u32, f32, Option<f32>, f32)> {
     let mut counts: HashMap<char, u32> = HashMap::new();
     for c in text.chars() {
         *counts.entry(c).or_insert(0) += 1;

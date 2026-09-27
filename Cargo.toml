@@ -17,8 +17,12 @@ members = [
     "courses/graph-visualize",
     "courses/challange-week1",
     "courses/mutable-fruit-salad",
-    "courses/cli-customize-fruit-salad"
-, "courses/homophonic-cipher", "courses/caesar-cipher", "courses/decoder-ring"]
+    "courses/cli-customize-fruit-salad",
+    "courses/homophonic-cipher",
+    "courses/caesar-cipher",
+    "courses/decoder-ring",
+    "courses/sha3-dupe-detector"
+]
 
 
 [workspace.package]

@@ -1,0 +1,14 @@
+[package]
+name = "sha3-dupe-detector"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+hex = "0.4.3"
+rand = "0.10.3"
+sha3 = "0.12.0"
+
+[lints]
+workspace = true
