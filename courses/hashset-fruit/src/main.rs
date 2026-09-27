@@ -1,6 +1,6 @@
+use rand::prelude::IndexedRandom;
 use rand::rng;
 use std::collections::HashSet;
-use rand::prelude::IndexedRandom;
 fn generate_fruit() -> &'static str {
     let fruits = [
         "Apple",
@@ -10,7 +10,7 @@ fn generate_fruit() -> &'static str {
         "Elderberry",
         "Fig",
         "Grape",
-        "Honeydew"
+        "Honeydew",
     ];
     let mut _rnd = rng();
     fruits.choose(&mut _rnd).unwrap()

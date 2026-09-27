@@ -1,0 +1,12 @@
+[package]
+name = "challange-week1"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+petgraph = "0.8.3"
+
+[lints]
+workspace = true

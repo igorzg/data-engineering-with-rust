@@ -9,8 +9,16 @@ members = [
     "courses/btreeset-fruit",
     "courses/hashset-fruit",
     "courses/linked-list-fruit-salad",
-    "courses/vector-fruit-salad"
-, "courses/binaryheap-fruit", "courses/pagerank", "courses/lisbon-shortest-path", "courses/community-detection", "courses/graph-visualize", "courses/challange-week1", "courses/mutable-fruit-salad", "courses/cli-customize-fruit-salad"]
+    "courses/vector-fruit-salad",
+    "courses/binaryheap-fruit",
+    "courses/pagerank",
+    "courses/lisbon-shortest-path",
+    "courses/community-detection",
+    "courses/graph-visualize",
+    "courses/challange-week1",
+    "courses/mutable-fruit-salad",
+    "courses/cli-customize-fruit-salad"
+]
 
 
 [workspace.package]

@@ -1,0 +1,13 @@
+date,region,product,units,unit_price,revenue
+2026-09-01,north,widget,12,9.99,119.88
+2026-09-01,south,gadget,7,24.50,171.50
+2026-09-02,north,gadget,3,24.50,73.50
+2026-09-02,east,widget,40,9.99,399.60
+2026-09-03,west,gizmo,1,99.00,99.00
+2026-09-03,south,widget,25,9.99,249.75
+2026-09-04,north,gizmo,2,99.00,198.00
+2026-09-04,east,gadget,15,24.50,367.50
+2026-09-05,west,widget,8,9.99,79.92
+2026-09-05,south,gizmo,1,99.00,99.00
+2026-09-06,north,widget,33,9.99,329.67
+2026-09-06,east,gadget,6,24.50,147.00

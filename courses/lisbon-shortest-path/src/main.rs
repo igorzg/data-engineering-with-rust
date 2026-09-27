@@ -1,6 +1,6 @@
-use petgraph::{Graph, Undirected};
-use petgraph::prelude::*;
 use petgraph::algo::dijkstra;
+use petgraph::prelude::*;
+use petgraph::{Graph, Undirected};
 
 fn main() {
     let mut graph = Graph::<&str, u32, Undirected>::new_undirected();
@@ -18,10 +18,10 @@ fn main() {
         (monastery, lx_factory, 3),
         (monastery, commerce_square, 6),
         (lx_factory, commerce_square, 5),
-        (commerce_square, lisbon_cathedral, 1)
+        (commerce_square, lisbon_cathedral, 1),
     ]);
 
-    let node_map = dijkstra(&graph, belem_tower, Some(lisbon_cathedral),  |_| 4);
+    let node_map = dijkstra(&graph, belem_tower, Some(lisbon_cathedral), |_| 4);
 
     if let Some(distance) = node_map.get(&lisbon_cathedral) {
         println!(

@@ -43,15 +43,15 @@
 //! The `main` function calls `generate_fruit_salad` to create a fruit salad and then prints it.
 //! The output will show the fruits in the heap, following the defined ordering where figs are
 //! prioritized over other fruits.
-use std::cmp::Ord;
 use rand::rng;
-use std::collections::{BinaryHeap};
 use rand::seq::IndexedRandom;
+use std::cmp::Ord;
+use std::collections::BinaryHeap;
 
 #[derive(Eq, PartialEq, Debug)]
 enum Fruit {
     Fig,
-    Other(String)
+    Other(String),
 }
 
 impl Ord for Fruit {
@@ -72,17 +72,9 @@ impl PartialOrd for Fruit {
 }
 
 fn generate_fruit_salad() -> BinaryHeap<Fruit> {
-    let mut  _rng = rng();
+    let mut _rng = rng();
     let fruits = vec![
-        "Apple",
-        "Orange",
-        "Pear",
-        "Peach",
-        "Banana",
-        "Fig",
-        "Fig",
-        "Fig",
-        "Fig"
+        "Apple", "Orange", "Pear", "Peach", "Banana", "Fig", "Fig", "Fig", "Fig",
     ];
     let mut fruit_salat = BinaryHeap::new();
     let mut figs_count = 0;

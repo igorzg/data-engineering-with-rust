@@ -4,9 +4,9 @@
 //! # Fields
 //!
 //! * `name` - The name of the fighter as a `String`.
-use std::fmt;
+use petgraph::graph::{NodeIndex, UnGraph};
 use petgraph::{Direction, EdgeDirection};
-use petgraph::graph::{UnGraph, NodeIndex};
+use std::fmt;
 
 /// Represents a fighter in a combat scenario.
 ///
@@ -24,13 +24,13 @@ use petgraph::graph::{UnGraph, NodeIndex};
 /// ```
 #[derive(Debug)]
 struct Fighter {
-    name: String
+    name: String,
 }
 
 impl Fighter {
     fn new(name: &str) -> Fighter {
-        Fighter{
-            name: name.to_string()
+        Fighter {
+            name: name.to_string(),
         }
     }
 }
@@ -114,7 +114,7 @@ fn main() {
         Fighter::new("Khabib Nurmagomedov"),
         Fighter::new("Jose Aldo"),
         Fighter::new("Conor McGregor"),
-        Fighter::new("Nate Diaz")
+        Fighter::new("Nate Diaz"),
     ];
 
     let fighter_nodes: Vec<NodeIndex> = fighters
@@ -133,7 +133,7 @@ fn main() {
     for (i, &node) in fighter_nodes.iter().enumerate() {
         let name = &fighters[i].name;
         let degree = graph.edges_directed(node, Direction::Outgoing).count() as f32;
-        let closeness  = 1.0 / degree;
+        let closeness = 1.0 / degree;
         println!("The closeness centrality of {} is {:.2}", name, closeness);
 
         match name.as_str() {
@@ -143,13 +143,11 @@ fn main() {
             ),
             "Dustin Poirier" | "Nate Diaz" => println!(
                 "{} has a centrality of {:.2}, implying they had less fights compared to Conor McGregor",
-                name,
-                closeness
+                name, closeness
             ),
             "Khabib Nurmagomedov" | "Jose Aldo" => println!(
                 "{} has a highest centrality of {:.2} as they have fought with the least number",
-                name,
-                closeness
+                name, closeness
             ),
             _ => {}
         }

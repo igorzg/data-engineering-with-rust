@@ -2,12 +2,15 @@ use textwrap::fill;
 
 struct PageRank {
     damping: f64,
-    iterations: usize
+    iterations: usize,
 }
 
 impl PageRank {
     fn new(damping: f64, iterations: usize) -> Self {
-        Self { damping, iterations }
+        Self {
+            damping,
+            iterations,
+        }
     }
 
     /// Calculates the PageRank of each node in a directed graph.
@@ -64,13 +67,7 @@ impl PageRank {
 }
 
 fn main() {
-    let graph = vec![
-        vec![1, 2],
-        vec![0],
-        vec![0, 3],
-        vec![0],
-        vec![0, 1]
-    ];
+    let graph = vec![vec![1, 2], vec![0], vec![0, 3], vec![0], vec![0, 1]];
 
     let names = vec!["ESPN", "NFN", "NBA", "UFC", "MLB"];
 

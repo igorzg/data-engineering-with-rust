@@ -1,0 +1,25 @@
+Rust is a systems programming language, and this course uses it to build
+small programs around the classic data structures: vectors, hash maps,
+linked lists, and graphs.
+
+A vector grows in place, and a program can push values into it while it
+reads a file. In the first exercise, the program reads a CSV file into a
+vector and computes the minimum, the maximum, and the mean of one column.
+
+The second exercise counts words. A hash map stores every distinct word
+as a key, and the count of that word as the value. Capitalization and
+punctuation are stripped, so "The", "the", and "the!" are all the same
+word in the map.
+
+A linked list chains its nodes together. Each node holds a word, a
+count, and a pointer to the next node. The list is built from the most
+common words, sorted alphabetically, and the top ten are printed.
+
+Graphs are edges between nodes. One question asks whether a graph is
+fully connected: can you travel from any node to any other node?
+Kosaraju's algorithm answers a harder question for directed graphs: it
+finds the strongly connected components, the groups of nodes where every
+node can reach every other node inside the group.
+
+Practice makes progress. Refill the vector, rebuild the hash map, relink
+the list, and rewire the graph until the program feels effortless.
