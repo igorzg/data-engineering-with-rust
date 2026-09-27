@@ -1,3 +1,48 @@
+//! A simple Rust program to generate a fruit salad using a binary heap.
+//!
+//! # Enum `Fruit`
+//!
+//! The `Fruit` enum represents different types of fruits that can be included in the salad.
+//! It has two variants:
+//! - `Fig`: Represents a fig.
+//! - `Other(String)`: Represents any other type of fruit, identified by its name as a string.
+//!
+//! # Implementations
+//!
+//! ## `Ord` for `Fruit`
+//!
+//! The `Ord` implementation defines the ordering between fruits in the salad. Figs are always
+//! considered greater than other fruits, and other fruits are considered equal to each other.
+//!
+//! ## `PartialOrd` for `Fruit`
+//!
+//! The `PartialOrd` implementation simply wraps the `Ord` implementation, ensuring that all
+//! comparisons return a valid ordering.
+//!
+//! # Function `generate_fruit_salad`
+//!
+//! Generates a fruit salad by creating a binary heap of `Fruit` items. The function ensures that
+//! at least two figs are included in the salad. It uses the `rand::seq::IndexedRandom` trait to
+//! randomly select fruits from a predefined list.
+//!
+//! # Returns
+//!
+//! A `BinaryHeap<Fruit>` containing at least two figs and other randomly selected fruits.
+//!
+//! # Example
+//!
+//! ```
+//! let salad = generate_fruit_salad();
+//! println!("Salads: {:?}", salad);
+//! ```
+//!
+//! This example will print a binary heap of fruits, with at least two figs present.
+//!
+//! # Main Function
+//!
+//! The `main` function calls `generate_fruit_salad` to create a fruit salad and then prints it.
+//! The output will show the fruits in the heap, following the defined ordering where figs are
+//! prioritized over other fruits.
 use std::cmp::Ord;
 use rand::rng;
 use std::collections::{BinaryHeap};

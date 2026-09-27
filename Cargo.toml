@@ -10,7 +10,7 @@ members = [
     "courses/hashset-fruit",
     "courses/linked-list-fruit-salad",
     "courses/vector-fruit-salad"
-, "courses/binaryheap-fruit"]
+, "courses/binaryheap-fruit", "courses/pagerank", "courses/lisbon-shortest-path", "courses/community-detection"]
 
 
 [workspace.package]

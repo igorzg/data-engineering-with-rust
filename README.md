@@ -18,4 +18,5 @@ The workspace includes the following course crates:
 ## Requirements
 
 - Rust toolchain with Cargo installed
+- Author of the course: https://github.com/noahgift
 
