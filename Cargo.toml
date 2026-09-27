@@ -18,7 +18,7 @@ members = [
     "courses/challange-week1",
     "courses/mutable-fruit-salad",
     "courses/cli-customize-fruit-salad"
-, "courses/homophonic-cipher"]
+, "courses/homophonic-cipher", "courses/caesar-cipher"]
 
 
 [workspace.package]
