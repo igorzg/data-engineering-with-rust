@@ -1,0 +1,18 @@
+[package]
+name = "cli-customize-fruit-salad"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+clap = {  version = "4.6.7", features = ["derive"] }
+csv = "1.4.0"
+rand = "0.10.3"
+
+[lints]
+workspace = true
+
+[lib]
+name = "fruit_salad_maker"
+path = "src/lib.rs"
