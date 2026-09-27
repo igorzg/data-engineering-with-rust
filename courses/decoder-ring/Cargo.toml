@@ -1,0 +1,12 @@
+[package]
+name = "decoder-ring"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+clap = { version = "4.6.7", features = ["derive"] }
+
+[lints]
+workspace = true
