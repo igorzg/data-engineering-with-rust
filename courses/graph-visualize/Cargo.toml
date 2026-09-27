@@ -1,0 +1,12 @@
+[package]
+name = "graph-visualize"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+rasciigraph = "0.3.0"
+
+[lints]
+workspace = true
