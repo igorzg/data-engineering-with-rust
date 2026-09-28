@@ -22,7 +22,7 @@ members = [
     "courses/caesar-cipher",
     "courses/decoder-ring",
     "courses/sha3-dupe-detector"
-]
+, "courses/challange-week2", "courses/challange-week3", "courses/challange-week4", "courses/dining-philosopher", "courses/webcrawl-wikipedia-rayon"]
 
 
 [workspace.package]
