@@ -1,0 +1,13 @@
+[package]
+name = "polarsdf"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+clap = {version = "4.6.7", features = ["derive"]}
+polars = "0.55.2"
+
+[lints]
+workspace = true
