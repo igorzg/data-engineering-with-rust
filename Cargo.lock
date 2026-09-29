@@ -174,6 +174,9 @@ dependencies = [
 [[package]]
 name = "challange-week2"
 version = "0.1.0"
+dependencies = [
+ "rayon",
+]
 
 [[package]]
 name = "challange-week3"
